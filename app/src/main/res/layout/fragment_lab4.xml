@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textEq4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eq"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/eq4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/l4eq"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"
+            app:layout_constraintTop_toBottomOf="@id/textEq4"/>
+
+        <TextView
+            android:id="@+id/textAcc4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/accuracy"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"
+            app:layout_constraintTop_toBottomOf="@id/eq4"/>
+
+        <ImageView
+            android:id="@+id/eps4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintRight_toLeftOf="@id/textAcc4"
+            app:layout_constraintStart_toEndOf="@id/textAcc4"
+            app:layout_constraintTop_toBottomOf="@id/eq4"
+            app:srcCompat="@drawable/epsilum"/>
+
+        <TextView
+            android:id="@+id/textN4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"
+            app:layout_constraintTop_toBottomOf="@id/eps4"/>
+
+        <SeekBar
+            android:id="@+id/seekEps4"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:max="6"
+            android:progress="3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintRight_toLeftOf="@id/textN4"
+            app:layout_constraintStart_toEndOf="@id/textN4"
+            app:layout_constraintTop_toBottomOf="@id/eps4"/>
+
+        <TextView
+            android:id="@+id/textAB4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bounds"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"
+            app:layout_constraintTop_toBottomOf="@id/textN4"/>
+
+        <TextView
+            android:id="@+id/textA4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/a"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"
+            app:layout_constraintTop_toBottomOf="@id/textAB4"/>
+
+        <EditText
+            android:id="@+id/editA4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text=""
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintRight_toLeftOf="@id/textA4"
+            app:layout_constraintStart_toEndOf="@id/textA4"
+            app:layout_constraintTop_toBottomOf="@id/textAB4" />
+
+        <TextView
+            android:id="@+id/textB4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/b"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintRight_toLeftOf="@id/editA4"
+            app:layout_constraintStart_toEndOf="@id/editA4"
+            app:layout_constraintTop_toBottomOf="@id/textAB4"/>
+
+        <EditText
+            android:id="@+id/editB4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text=""
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintRight_toLeftOf="@id/textB4"
+            app:layout_constraintStart_toEndOf="@id/textB4"
+            app:layout_constraintTop_toBottomOf="@id/textAB4" />
+
+        <Button
+            android:id="@+id/buttonFile4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/file"
+            android:textSize="18sp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginStart="65dp"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"
+            app:layout_constraintTop_toBottomOf="@id/editB4" />
+
+        <TextView
+            android:id="@+id/file4_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/file4_name"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"
+            app:layout_constraintTop_toBottomOf="@id/buttonFile4"/>
+
+        <Button
+            android:id="@+id/buttonApply4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"
+            android:textSize="18sp"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginStart="95dp"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"
+            app:layout_constraintTop_toBottomOf="@id/file4_info" />
+
+        <Button
+            android:id="@+id/calc4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calc4"
+            android:textSize="18sp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginStart="125dp"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"
+            app:layout_constraintTop_toBottomOf="@id/buttonApply4" />
+
+        <TextView
+            android:id="@+id/alert4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alert"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/calc4"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"/>
+
+        <TextView
+            android:id="@+id/res4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="24sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/alert4"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"/>
+
+        <TextView
+            android:id="@+id/empty4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="24sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintTop_toBottomOf="@id/res4"
+            app:layout_constraintRight_toRightOf="@id/textEq4"
+            app:layout_constraintStart_toStartOf="@id/textEq4"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

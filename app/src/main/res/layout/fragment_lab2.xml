@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lab1">
+
+        <TextView
+            android:id="@+id/arr2text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr2"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_arr2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr2text"/>
+
+        <TextView
+            android:id="@+id/arr10text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr10"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr2" />
+
+        <EditText
+            android:id="@+id/edit_arr10"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr10text"/>
+
+        <TextView
+            android:id="@+id/arr25text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr25"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr10" />
+
+        <EditText
+            android:id="@+id/edit_arr25"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr25text"/>
+
+        <TextView
+            android:id="@+id/arr50text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr50"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr25" />
+
+        <EditText
+            android:id="@+id/edit_arr50"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr50text"/>
+
+        <TextView
+            android:id="@+id/arr100text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr100"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr50" />
+
+        <EditText
+            android:id="@+id/edit_arr100"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr100text"/>
+
+        <TextView
+            android:id="@+id/arr200text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr200"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr100" />
+
+        <EditText
+            android:id="@+id/edit_arr200"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr200text"/>
+
+        <TextView
+            android:id="@+id/arr500text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr500"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr200" />
+
+        <EditText
+            android:id="@+id/edit_arr500"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr500text"/>
+
+        <TextView
+            android:id="@+id/arr1000text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr1000"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr500" />
+
+        <EditText
+            android:id="@+id/edit_arr1000"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr1000text"/>
+
+        <TextView
+            android:id="@+id/arr2000text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr2000"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr1000" />
+
+        <EditText
+            android:id="@+id/edit_arr2000"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr2000text"/>
+
+        <TextView
+            android:id="@+id/arr5000text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arr5000"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr2000" />
+
+        <EditText
+            android:id="@+id/edit_arr5000"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/arr5000text"
+            />
+
+        <Button
+            android:id="@+id/lab2_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/apply"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/file2_info"/>
+
+        <Button
+            android:id="@+id/lab2_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/file"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginStart="45dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/edit_arr5000"/>
+
+        <TextView
+            android:id="@+id/file2_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/file2_name"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/lab2_file"/>
+
+        <Button
+            android:id="@+id/lab2_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/sort_draw"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginStart="95dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/lab2_apply"/>
+
+        <TextView
+            android:id="@+id/lab2_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alert"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/lab2_sort" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/lab2_graph"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/arr2text"
+            app:layout_constraintStart_toStartOf="@id/arr2text"
+            app:layout_constraintTop_toBottomOf="@id/lab2_alert"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

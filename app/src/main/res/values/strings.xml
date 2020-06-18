@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">AMO</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">AMO Labs</string>
+    <string name="nav_header_subtitle">Diachenko Tetiana, IV-81</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_1">Lab 1</string>
+    <string name="menu_2">Lab 2</string>
+    <string name="menu_3">Lab 3</string>
+    <string name="menu_4">Lab 4</string>
+    <string name="menu_5">Lab 5</string>
+
+
+
+    <string name="home">App for Labs\n\n\nby Diachenko Tetiana\ngroup IV-81\n\nTo choose the lab open side menu.</string>
+
+
+
+    <string name="sequential">Sequential algorithm</string>
+    <string name="seq_task">Formula for sequential algorithm</string>
+    <string name="branched">Branched algorithm</string>
+    <string name="branch_task">Formula for branched algorithm</string>
+    <string name="cyclic">Cyclic algorithm</string>
+    <string name="cyc_task">Formula for cyclic algorithm</string>
+
+    <string name="sb">Enter parameters for sequential and branched algorithms here.\nOnly one decimal number in each line is allowed.</string>
+    <string name="b">b =</string>
+    <string name="c">c =</string>
+    <string name="d">d =</string>
+    <string name="f">f =</string>
+    <string name="g">g =</string>
+    <string name="j">j =</string>
+    <string name="k">k =</string>
+    <string name="v">v =</string>
+
+    <string name="cyc_par">Enter parameters for cyclic algorithm here.\nPlease, enter 50 decimal numbers in each line, separated by commas.</string>
+    <string name="ai">ai =</string>
+    <string name="ci">ci =</string>
+    <string name="fi">fi =</string>
+    <string name="gi">gi =</string>
+
+    <string name="file">Import from the file</string>
+    <string name="file1_name">File is available for editing at:\nInternal Storage/amo/lab1_data.txt\nFile is filled with sample data.\nFeel free to change the values, but please, don\'t change the formatting.</string>
+    <string name="apply">Apply changes</string>
+    <string name="y1">Y1 = </string>
+    <string name="y">y = </string>
+    <string name="f_b">f = </string>
+
+    <string name="alert">No problems yet</string>
+
+
+
+
+    <string name="arr2">2-element array</string>
+    <string name="arr10">10-element array</string>
+    <string name="arr25">25-element array</string>
+    <string name="arr50">50-element array</string>
+    <string name="arr100">100-element array</string>
+    <string name="arr200">200-element array</string>
+    <string name="arr500">500-element array</string>
+    <string name="arr1000">1000-element array</string>
+    <string name="arr2000">2000-element array</string>
+    <string name="arr5000">5000-element array</string>
+
+    <string name="file2_name">File is available for editing at:\nInternal Storage/amo/lab2_data.txt\nFile is filled with sample data.\nFeel free to change the values, but please, don\'t change the formatting.</string>
+    <string name="sort_draw">Sort and\nPlot</string>
+
+
+
+
+    <string name="L3_prompt">Choose interpolation target</string>
+    <string name="L3_sin">Test example</string>
+    <string name="L3_function">Function</string>
+    <string name="L3_interpol">Interpolate\nand plot</string>
+    <string name="L3_table">Table for x = 0.3</string>
+
+
+
+    <string name="eq">The equasion is:</string>
+    <string name="accuracy">Set accuracy of solution:</string>
+    <string name="bounds">Set bounds of the interval [a;b]:\n(The interval will automatically flip if a > b)</string>
+    <string name="a">a =</string>
+    <string name="file4_name">File is available for editing at:\nInternal Storage/amo/lab4_data.txt\nFile is filled with sample data.\nFeel free to change the values, but please, don\'t change the formatting.</string>
+    <string name="calc4">Result</string>
+
+    <string name="systm5">The system is:</string>
+    <string name="coef5">Enter coefficients below:</string>
+    <string name="a11">a11 = </string>
+    <string name="a12">a12 = </string>
+    <string name="a13">a13 = </string>
+    <string name="a21">a21 = </string>
+    <string name="a22">a22 = </string>
+    <string name="a23">a23 = </string>
+    <string name="a31">a31 = </string>
+    <string name="a32">a32 = </string>
+    <string name="a33">a33 = </string>
+    <string name="b1">b1 = </string>
+    <string name="b2">b2 = </string>
+    <string name="b3">b3 = </string>
+    <string name="file5_name">File is available for editing at:\nInternal Storage/amo/lab5_data.txt\nFile is filled with sample data.\nFeel free to change the values, but please, don\'t change the formatting.</string>
+    <string name="slv_5">Solve</string>
+
+
+
+
+</resources>

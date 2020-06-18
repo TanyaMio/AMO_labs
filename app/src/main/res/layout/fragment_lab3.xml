@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lab1">
+
+        <TextView
+            android:id="@+id/choice_l3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/L3_prompt"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <RadioGroup
+            android:id="@+id/radGr3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="249dp"
+            tools:layout_editor_absoluteY="15dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/choice_l3"
+            app:layout_constraintStart_toStartOf="@id/choice_l3"
+            app:layout_constraintTop_toBottomOf="@id/choice_l3">
+            <RadioButton
+                android:id="@+id/sin_l3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/L3_sin"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="@id/choice_l3"
+                app:layout_constraintStart_toStartOf="@id/choice_l3"
+                app:layout_constraintTop_toBottomOf="@id/choice_l3" />
+
+            <ImageView
+                android:id="@+id/sinXImg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/sin_x"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="@id/sin_l3"
+                app:layout_constraintStart_toStartOf="@id/sin_l3"
+                app:layout_constraintTop_toBottomOf="@id/sin_l3"/>
+
+            <RadioButton
+                android:id="@+id/func_l3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/L3_function"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="@id/sin_l3"
+                app:layout_constraintStart_toStartOf="@id/sin_l3"
+                app:layout_constraintTop_toBottomOf="@id/sinXImg3" />
+            <ImageView
+                android:id="@+id/funcImg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/func_l3"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="@id/sin_l3"
+                app:layout_constraintStart_toStartOf="@id/sin_l3"
+                app:layout_constraintTop_toBottomOf="@id/func_l3"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/lab3_interpol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/L3_interpol"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginStart="95dp"
+            app:layout_constraintRight_toRightOf="@id/radGr3"
+            app:layout_constraintStart_toStartOf="@id/radGr3"
+            app:layout_constraintTop_toBottomOf="@id/radGr3"/>
+
+        <TextView
+            android:id="@+id/lab3_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/alert"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/radGr3"
+            app:layout_constraintStart_toStartOf="@id/radGr3"
+            app:layout_constraintTop_toBottomOf="@id/lab3_interpol" />
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/lab3_graph"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/radGr3"
+            app:layout_constraintStart_toStartOf="@id/radGr3"
+            app:layout_constraintTop_toBottomOf="@id/lab3_alert"/>
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/lab3_err_graph"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/radGr3"
+            app:layout_constraintStart_toStartOf="@id/radGr3"
+            app:layout_constraintTop_toBottomOf="@id/lab3_graph"/>
+
+        <TextView
+            android:id="@+id/lab3_blur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintRight_toRightOf="@id/radGr3"
+            app:layout_constraintStart_toStartOf="@id/radGr3"
+            app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@id/radGr3"
+            app:layout_constraintStart_toStartOf="@id/radGr3"
+            app:layout_constraintTop_toBottomOf="@id/lab3_blur">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_headempt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            <TextView
+                android:id="@+id/lab3_headTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/L3_table"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_headN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="n"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_headErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Error"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_headExErr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exact error"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_headK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="k"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lab3_N1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="1"
+                    android:textSize="18sp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_Err1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_ExErr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_K1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_N2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_Err2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_ExErr2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_K2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_N3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_Err3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_ExErr3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_K3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_N4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_Err4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_ExErr4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_K4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_N5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_Err5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_ExErr5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_K5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_N6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_Err6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_ExErr6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_K6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_N7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_Err7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_ExErr7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_K7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_N8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_Err8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_ExErr8"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_K8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lab3_N9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toRightOf="@id/radGr3"
+                    app:layout_constraintStart_toStartOf="@id/radGr3"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_Err9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headN"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headN"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_ExErr9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+                <TextView
+                    android:id="@+id/lab3_K9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintRight_toLeftOf="@id/lab3_headExErr"
+                    app:layout_constraintStart_toEndOf="@id/lab3_headExErr"
+                    app:layout_constraintTop_toBottomOf="@id/lab3_err_graph" />
+            </TableRow>
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
